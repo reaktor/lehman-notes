@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Live coding? What could go wrong?!</h1>
+          <img src="./Reaktor_Logo.png" style="max-width: 200px; box-shadow: none; border: none;">
+        </section>
+        <section>
+          <h3>Who are these dudes?</h3>
+          <p>Pics of Ivan and Ian</p>
+        </section>
+        <section>
+          <h3>Show of hands...</h3>
+          <ul>
+            <li>People who've done web dev?</li>
+            <li>People who've written Javascript?</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Package Management</h3>
+        </section>
+        <section>
+          <h3>Source Control</h3>
+        </section>
+        <section>
+          <section>
+            <h3>Javascript</h3>
+          </section>
+          <section>
+            <h3>Many call it the language of the web... :unamused:</h3>
+            <ul>
+              <li>It is the language of the browser</li>
+              <li>With the invent of Node.js, it also runs on servers</li>
+              <li>With the invent of Node.js, it also runs on servers</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Many call it the language of the web... :unamused:</h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>HTTP - the protocol of the web</h3>
+          </section>
+          <section>
+            <h3>Client vs. Server</h3>
+          </section>
+          <section>
+            <h3>URLs, Routes, Paths, etc.</h3>
+          </section>
+          <section>
+            <h3>Your typical web app structure</h3>
+            <img src="http://www.softwaretestingclass.com/wp-content/uploads/2013/01/three-tier-architecture.png" />
+          </section>
+        </section>
+        <section>
+          <h3>HTML/CSS</h3>
+        </section>
+        <section>
+          <h3>Databases / Application Persistance</h3>
+        </section>
+        <section>
+          <h3>Testing your code</h3>
+        </section>
+        <section>
+          <h3>Deployment</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
