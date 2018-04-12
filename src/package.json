@@ -6,6 +6,7 @@
     "start": "nodemon ./server.js",
     "db:migrate:make": "knex migrate:make",
     "db:migrate": "knex migrate:latest",
+    "db:create": "node db/scripts/create.js",
     "db:rollback": "knex migrate:rollback"
   },
   "dependencies": {
@@ -13,7 +14,8 @@
     "express": "4.16.3",
     "express-handlebars": "3.0.0",
     "knex": "0.14.5",
-    "pg": "7.4.1"
+    "pg": "7.4.1",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "nodemon": "1.17.3"

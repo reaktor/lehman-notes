@@ -1,6 +1,6 @@
 const { Pool } = require('pg');
 
-export const connectionParams = {
+const connectionParams = {
   user: process.env.DB_USER,
   password: process.env.DB_PWD,
   database: process.env.DB_NAME,
@@ -10,6 +10,11 @@ export const connectionParams = {
 
 const pool = new Pool(connectionParams)
 
-export const db = {
+const db = {
   query: function(text, params) { return pool.query(text, params) }
+}
+
+module.exports = {
+  db: db,
+  connectionParams: connectionParams
 }
