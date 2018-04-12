@@ -1,5 +1,7 @@
+const { connectionParams } = require('./db');
+
 module.exports = {
   client: 'pg',
-  connection: process.env.DATABASE_URL || { user: 'lehman', password: '123', database: 'notes' },
+  connection: connectionParams,
   pool: { min: 0, max: 7 }
 };
