@@ -3,16 +3,18 @@
   "private": true,
   "description": "This is a presentation for the NSBE-SHPE presentation in Lehman College",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "nodemon ./server.js",
+    "db:migrate:make": "knex migrate:make",
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback"
   },
   "dependencies": {
     "express": "4.16.3",
-    "express-handlebars": "3.0.0"
+    "express-handlebars": "3.0.0",
+    "knex": "0.14.5",
+    "pg": "7.4.1"
   },
   "devDepencies": {
     "nodemon": "1.17.3"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3"
   }
 }
