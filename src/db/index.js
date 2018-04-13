@@ -10,13 +10,11 @@ const connectionParams = {
 
 const pool = new Pool(connectionParams)
 
-const db = {
-  query: function(text, params) {
-    return pool.query(text, params)
-  },
+function query(text, params) {
+  return pool.query(text, params)
 }
 
 module.exports = {
-  db: db,
+  query: query,
   connectionParams: connectionParams,
 }

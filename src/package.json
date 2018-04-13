@@ -8,6 +8,7 @@
     "db:migrate:make": "knex migrate:make",
     "db:migrate": "knex migrate:latest",
     "db:create": "node db/scripts/create.js",
+    "db:seed": "knex seed:run",
     "db:destroy": "node db/scripts/destroy.js",
     "db:reset": "npm run db:destroy && npm run db:create && npm run db:migrate",
     "db:rollback": "knex migrate:rollback",
