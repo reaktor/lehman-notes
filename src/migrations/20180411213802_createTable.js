@@ -12,5 +12,3 @@ exports.up = async function(knex) {
 exports.down = async function(knex) {
   return await knex.schema.raw(`DROP TABLE IF EXISTS notes`)
 }
-
-
