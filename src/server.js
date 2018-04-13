@@ -8,7 +8,16 @@ const app = express()
 app.engine('hbs', hbs({ extname: 'hbs', defaultLayout: 'layout' }))
 app.set('views', './views')
 app.set('view engine', 'hbs')
+app.use(express.static('public'))
 
-app.get('/', (req, res) => res.render('home'))
+app.get('/', function(req, res) {
+  res.render('home')
+})
 
-app.listen('3000', () => console.log('App is running on port 3000'))
+app.get('/notes/new', function(req, res) {
+  res.render('note', { body: '' })
+})
+
+app.listen('3000', function() {
+  console.log('App is running on port 3000')
+})
