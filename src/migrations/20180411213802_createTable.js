@@ -1,5 +1,5 @@
-exports.up = async function(knex) {
-  return await knex.schema.raw(`
+exports.up = function(knex) {
+  return knex.schema.raw(`
     CREATE TABLE notes(
       id SERIAL PRIMARY KEY,
       body text NOT NULL,
@@ -9,6 +9,6 @@ exports.up = async function(knex) {
   `)
 }
 
-exports.down = async function(knex) {
-  return await knex.schema.raw(`DROP TABLE IF EXISTS notes`)
+exports.down = function(knex) {
+  return knex.schema.raw(`DROP TABLE IF EXISTS notes`)
 }
