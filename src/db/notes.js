@@ -5,6 +5,11 @@ async function getNotes() {
   return rows
 }
 
+async function deleteNote(id) {
+  await db.query('DELETE FROM notes WHERE notes.id = $1', [id])
+}
+
 module.exports = {
   all: getNotes,
+  delete: deleteNote,
 }
