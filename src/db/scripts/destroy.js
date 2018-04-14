@@ -3,7 +3,6 @@ require('dotenv').config()
 const R = require('ramda')
 const { connectionParams } = require('../index')
 const dbName = connectionParams.database
-console.log(dbName)
 const knex = require('knex')({
   client: 'pg',
   connection: R.omit(['database'], connectionParams),

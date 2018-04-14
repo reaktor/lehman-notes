@@ -25,6 +25,8 @@ app.get('/notes/new', function(req, res) {
   res.render('note', { body: '' })
 })
 
+app.post('/notes/new', async function(req, res) {})
+
 app.listen('3000', function() {
   console.log('App is running on port 3000')
 })
