@@ -22,7 +22,7 @@ app.get('/notes', async function(req, res) {
 })
 
 app.get('/notes/new', function(req, res) {
-  res.render('note', { body: '' })
+  res.render('notes/new', { body: '' })
 })
 
 app.post('/notes/new', async function(req, res) {})
