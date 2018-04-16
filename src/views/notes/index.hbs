@@ -1,11 +1,11 @@
 {{>message this}}
-<a class="btn btn-success float-right mr-5" href="/notes/{{this.id}}">New Note</a>
+<a class="btn btn-success float-right mr-5" href="/notes/new">New Note</a>
 <table class="table table-hover">
   <thead>
     <th class="border-0">Title</th>
   </thead>
   <tbody>
-    {{#each notes}} 
+    {{#each notes}}
       <tr>
         <td>{{this.title}}</td>
         <td>
@@ -16,8 +16,8 @@
           <a class="btn btn-primary" href="/notes/{{this.id}}">Update</a>
         </td>
         </td>
-      </tr> 
-    {{/each}} 
+      </tr>
+    {{/each}}
   </tbody>
 </table>
 
