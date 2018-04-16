@@ -1,6 +1,6 @@
 const { Pool } = require('pg')
 
-const connectionParams = {
+const connectionParams = process.env.DATABASE_URL || {
   user: process.env.DB_USER,
   password: process.env.DB_PWD,
   database: process.env.DB_NAME,
