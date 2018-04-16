@@ -1,9 +1,4 @@
-  {{#each messages.info}} 
-    <div class="alert alert-info">{{this}}</div>
-  {{/each}} 
-  {{#each messages.danger}} 
-    <div class="alert alert-danger">{{this}}</div>
-  {{/each}} 
+{{>message this}}
 <table class="table">
   <thead>
     <th>Title</th>
