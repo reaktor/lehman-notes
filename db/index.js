@@ -1,14 +1,14 @@
 const { Pool } = require('pg')
 
-const connectionParams = process.env.DATABASE_URL || {
-  user: process.env.DB_USER,
-  password: process.env.DB_PWD,
-  database: process.env.DB_NAME,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-}
+const connectionString =
+  process.env.DATABASE_URL ||
+  `postgres://${process.env.DB_USER}:${process.env.DB_PWD}@${
+    process.env.DB_HOST
+  }:${process.env.DB_PORT}/${process.env.DB_NAME}`
 
-const pool = new Pool(connectionParams)
+const pool = new Pool({
+  connectionString,
+})
 
 function query(text, params) {
   return pool.query(text, params)
@@ -16,5 +16,5 @@ function query(text, params) {
 
 module.exports = {
   query: query,
-  connectionParams: connectionParams,
+  connectionParams: connectionString,
 }
