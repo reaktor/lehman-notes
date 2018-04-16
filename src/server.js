@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
 
 app.get('/', function(req, res) {
-  res.render('home')
+  res.redirect('/notes')
 })
 
 app.get('/notes', async function(req, res) {
