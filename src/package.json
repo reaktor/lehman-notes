@@ -3,6 +3,10 @@
   "private": true,
   "description":
     "This is a presentation for the NSBE-SHPE presentation in Lehman College",
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.x"
+  },
   "scripts": {
     "start": "nodemon ./server.js",
     "db:migrate:make": "knex migrate:make",
