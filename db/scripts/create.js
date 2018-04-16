@@ -1,14 +1,19 @@
 require('dotenv').config()
 
-const R = require('ramda')
+const url = require('url')
 const { connectionParams } = require('../index')
-const dbName = connectionParams.database
-const knex = require('knex')({ client: 'pg', connection: R.dissoc('database') })
+const dbName = connectionParams.split('/')[3]
+const dbParams = url.parse(connectionParams)
+const knex = require('knex')({
+  client: 'pg',
+  connection: `${dbParams.protocol}//${dbParams.auth}@${dbParams.host}`,
+})
 
 async function createDb() {
   try {
     await knex.raw(`CREATE DATABASE ${dbName}`)
-    console.log(`Database ${dbName} created successfully!`)
+    await knex.raw(`CREATE DATABASE ${dbName}_test`)
+    console.log(`Database ${dbName} and ${dbName}_test created successfully!`)
   } catch (e) {
     console.log(e)
   } finally {

@@ -1,17 +1,19 @@
 require('dotenv').config()
 
-const R = require('ramda')
+const url = require('url')
 const { connectionParams } = require('../index')
-const dbName = connectionParams.database
+const dbName = connectionParams.split('/')[3]
+const dbParams = url.parse(connectionParams)
 const knex = require('knex')({
   client: 'pg',
-  connection: R.omit(['database'], connectionParams),
+  connection: `${dbParams.protocol}//${dbParams.auth}@${dbParams.host}`,
 })
 
 async function destroyDb() {
   try {
     await knex.raw(`DROP DATABASE IF EXISTS ${dbName}`)
-    console.log(`Database ${dbName} deleted successfully!`)
+    await knex.raw(`DROP DATABASE IF EXISTS ${dbName}_test`)
+    console.log(`Database ${dbName} and ${dbName}_test deleted successfully!`)
   } catch (e) {
     console.log(e)
   } finally {
