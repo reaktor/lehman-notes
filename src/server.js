@@ -11,8 +11,6 @@ const bodyParser = require('body-parser')
 const notes = require('./db/notes')
 
 const app = express()
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
 
 app.engine('hbs', hbs({ extname: 'hbs', defaultLayout: 'layout' }))
 app.set('views', './views')
@@ -22,6 +20,8 @@ app.use(cookie('secret'))
 app.use(session({ name: 'sess', keys: ['kwy1', 'kdjf4'], maxAge: 60000 }))
 app.use(flash())
 app.use(methOverride('_method'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
 
 app.get('/', function(req, res) {
