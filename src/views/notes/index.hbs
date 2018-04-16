@@ -1,22 +1,20 @@
-  {{#each messages.info}} 
-    <div class="alert alert-info">{{this}}</div>
-  {{/each}} 
-  {{#each messages.danger}} 
-    <div class="alert alert-danger">{{this}}</div>
-  {{/each}} 
-<table class="table">
+{{>message this}}
+<a class="btn btn-success float-right mr-5" href="/notes/{{this.id}}">New Note</a>
+<table class="table table-hover">
   <thead>
-    <th>Title</th>
-    <th></th>
+    <th class="border-0">Title</th>
   </thead>
   <tbody>
     {{#each notes}} 
       <tr>
         <td>{{this.title}}</td>
         <td>
-          <form method="post" action="/notes/{{this.id}}?_method=DELETE" enctype="application/x-www-form-urlencoded">
+          <form method="POST" action="/notes/{{this.id}}?_method=DELETE">
             <input class="btn btn-danger" type="submit" value="Delete" />
           </form>
+        <td>
+          <a class="btn btn-primary" href="/notes/{{this.id}}">Update</a>
+        </td>
         </td>
       </tr> 
     {{/each}} 
