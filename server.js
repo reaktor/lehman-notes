@@ -66,6 +66,7 @@ app.delete('/notes/:id', async function(req, res) {
   res.redirect('/notes')
 })
 
-app.listen('3000', function() {
+const appPort = process.env.PORT || 3000
+app.listen(appPort, function() {
   console.log('App is running on port 3000')
 })
