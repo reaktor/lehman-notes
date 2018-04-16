@@ -14,8 +14,16 @@ async function createNote(title, body) {
 }
 
 async function getNote(id) {
-  const { rows } = await db.query(`SELECT * FROM notes where id=$1`, [id])
+  const { rows } = await db.query('SELECT * FROM notes where id=$1', [id])
   return rows[0]
+}
+
+async function updateNote(id, title, body) {
+  await db.query('UPDATE notes SET title=$1, body=$2 WHERE id=$3', [
+    title,
+    body,
+    id,
+  ])
 }
 
 async function deleteNote(id) {
@@ -25,6 +33,7 @@ async function deleteNote(id) {
 module.exports = {
   all: getNotes,
   new: createNote,
+  update: updateNote,
   get: getNote,
   delete: deleteNote,
 }

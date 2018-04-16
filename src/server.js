@@ -46,11 +46,17 @@ app.post('/notes/new', async function(req, res) {
 })
 
 app.get('/notes/:id', async function(req, res) {
-  const { id } = req.params
-  const { title, body } = await notes.get(id)
-  console.log(title, body)
+  const { id, title, body } = await notes.get(req.params.id)
   const messages = req.flash()
-  res.render(`notes/form`, { title, body, messages })
+  res.render(`notes/form`, { id, title, body, messages })
+})
+
+app.put('/notes/:id', async function(req, res) {
+  const { id } = req.params
+  const { title, body } = req.body
+  await notes.update(id, title, body)
+  req.flash('info', `Note with id:${id} was updated successfully.`)
+  res.redirect(`/notes/${id}`)
 })
 
 app.delete('/notes/:id', async function(req, res) {
