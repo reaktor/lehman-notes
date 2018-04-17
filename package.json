@@ -21,7 +21,11 @@
   },
   "jest": {
     "globalSetup": "./test/setup.js",
-    "globalTeardown": "./test/teardown.js"
+    "globalTeardown": "./test/teardown.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/public/slides/"
+    ]
   },
   "dependencies": {
     "body-parser": "1.18.2",
