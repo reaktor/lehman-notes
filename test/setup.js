@@ -1,8 +1,5 @@
-process.env.DB_USER = 'postgres'
-process.env.DB_PWD = 'postgres'
-process.env.DB_NAME = 'lehman_college_dev_test'
-process.env.DB_HOST = 'localhost'
-process.env.DB_PORT = 5432
+process.env.DATABASE_URL =
+  'postgres://postgres:postgres@localhost:5432/lehman_college_dev'
 
 const { connectionParams } = require('./../db')
 const knex = require('knex')({ client: 'pg', connection: connectionParams })
