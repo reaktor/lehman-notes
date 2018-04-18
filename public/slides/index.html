@@ -31,13 +31,24 @@
           </section>
           <section>
             <h3>Who are these dudes?</h3>
-            <p>Pics of Ivan and Ian</p>
+            <section style="box-sizing: border-box; width: 50%; padding: 15px; float: left">
+              <h5>Ivan Manolov</h5>
+              <img src="./imanolov.jpg" style="border-radius: 50%; max-width: 200px"/>
+            </section>
+            <section style="box-sizing: border-box; width: 50%; padding: 15px; float: left;">
+              <h5>Ian Fosbery</h5>
+              <img src="./foz(1).jpg" style="border-radius: 50%;max-width: 200px"/>
+            </section>
           </section>
           <section>
             <h3>Goals of this...talk? Is this a talk?</h3>
-            <ul>
-              <li>Everyone learns something</li>
-            </ul>
+              <p>Everyone learns something</p>
+            <p><small>Including us...like don't promise to do a live coding talk</small></p>
+          </section>
+          <section>
+            <h3>What are we going to build?</h3>
+            <p>A note-taking application</p>
+            <p>(insert joke about students taking notes)</p>
           </section>
           <section>
             <h3>After we're done...</h3>
@@ -57,42 +68,258 @@
             </ul>
           </section>
           <section>
-            <h3>Raise your hands if you have questions, but don't wait for pauses.</h3>
+            <h3>Raise your hands if you have questions</h3>
+            <h3>Don't wait for pauses or for us to ask.</h3>
           </section>
         </section>
         <section>
-          <h3>Package Management</h3>
+          <section>
+            <h3>Package Management</h3>
+          </section>
+          <section>
+            <h3>What is Package Management?</h3>
+            <p>Installing, upgrading, configuring and removing stuff</p>
+            <p>JS -> npm or yarn</p>
+            <p>Ruby -> bundler</p>
+            <p>Python -> pip</p>
+            <p>Java -> maven</p>
+          </section>
+          <section>
+            <h3>Why is it important?</h3>
+            <p>Libraries / dependencies</p>
+            <p>Versioning - your app and dependencies</p>
+            <p>"Works on my machine!" problem</p>
+          </section>
         </section>
         <section>
-          <h3>Source Control</h3>
+          <section>
+            <h3>Source/Version Control</h3>
+          </section>
+          <section>
+            <h3>What is Source/Version Control?</h3>
+            <p>Managing history of changes to files in your app</p>
+            <p>Some tools include:</p>
+            <ul>
+              <li>Git</li>
+              <li>Mercurial</li>
+              <li>Subversion :(</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Why is it important</h3>
+            <ul>
+            <li>The good ol' days with FTP and root access</li>
+            <li>Copying zipped versions to backup :)</li>
+            <li>Related Saas Platforms (GitHub, Bitbucket)</li>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
             <h3>Javascript</h3>
           </section>
           <section>
-            <h3>Many call it the language of the web... :unamused:</h3>
+            <h3>Many call it the (scipting) language of the web... :unamused:</h3>
             <ul>
               <li>It is the language of the browser</li>
               <li>With the invent of Node.js, it also runs on servers</li>
-              <li>It was written in 10 days in 1995... They've been trying to fix it ever since.</li>
+              <li>It was written in 10 days in 1995...</li>
+              <li>Many ways to shoot yourself in the foot</li>
             </ul>
           </section>
           <section>
-            <h3>Tooling</h3>
+            <h3>Features / Characteristics</h3>
             <ul>
-              <li>nodemon: utility for reloading server on changes (local development)</li>
-              <li>kNex: database migrations and query building</li>
+              <li>Functions are first-class citizens</li>
+              <li>Runs on a single thread</li>
+              <li>Good for I/O bound stuff</li>
+              <li>It's asynchronous</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Asynchronous example</h3>
+            <p>You <em>might</em> see 'Wat?!' before anything else</p>
+            <pre><code>
+fetchUsers().then(function(response) {
+  console.log(response)
+})
+fetchCities().then(function(response) {
+  console.log(response)
+})
+console.log('Wat?!')
+            </code></pre>
+          </section>
+          <section>
+            <h3>We're going to use Async / Await syntax...</h3>
+            <pre><code>
+async function() {
+  const users = await fetchUsers()
+  console.log(users)
+  const cities = await fetchUsers()
+  console.log(cities)
+  console.log('Wat?!')
+}
+            </code></pre>
+          </section>
+          <section>
+            <h3>Tooling</h3>
+            <p>Code quality / standards</p>
+            <ul>
+            </ul>
+            <p>
+            <ul>
               <li>Eslint: symantic rules for your code</li>
               <li>Prettier: syntactic rules for your code</li>
+              <li>Husky & Pretty-quick: Auto running prettier</li>
+              <li>nodemon: utility for reloading server on changes (local development)</li>
+              <li>kNex: database migrations and query building from the command line</li>
             </ul>
           </section>
           <section>
             <h3>Libraries</h3>
             <ul>
               <li>Express: microframwork for web applications in node.js</li>
-              <li>Eslint: symantic rules for your code</li>
-              <li>Prettier: syntactic rules for your code</li>
+              <li>Handlebars: template engine</li>
+              <li>Jest: testing</li>
+              <li>Pg: Postgres client for Node.js</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>HTTP - the protocol of the web</h3>
+            <p>Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, and hypermedia information systems.</p>
+            <p>(Stolen from wikipedia)</p>
+          </section>
+          <section>
+            <h3>Client vs. Server</h3>
+          </section>
+          <section>
+            <h3>Your typical web app structure</h3>
+            <img src="http://www.softwaretestingclass.com/wp-content/uploads/2013/01/three-tier-architecture.png" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>HTML</h3>
+          </section>
+          <section>
+            <h3>HTML is your declarative code for web content</h3>
+            <p><code>p</code> is a paragraph tag</p>
+            <p><code>h1</code> is a header tag</p>
+            <p><code>div</code> is a divider/division tag</p>
+          </section>
+          <section>
+            <h3>Who decides this stuff?</h3>
+            <p>The W3C or WHATWG...depends who you ask</p>
+            <p>Obligatory Hacker News Link: https://news.ycombinator.com/item?id=16829473</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>CSS</h3>
+            <p>Cascading Style Sheets</p>
+          </section>
+          <section>
+            <h3>For describing presentation</h3>
+            <p>E.g., making your stuff look pretty</p>
+          </section>
+          <section>
+            <h3>CSS is what makes things look nice</h3>
+            <p><a href="http://www.csszengarden.com/">CSS Zen Garden...</a></p>
+          </section>
+        </section>
+        <section>
+          <h3>So...What do we have in a browser</h3>
+          <p>HTML for structure</p>
+          <p>CSS for presentation</p>
+          <p>Javascript for functionality</p>
+        </section>
+        <section>
+          <section>
+            <h3>Databases / Application Persistence</h3>
+          </section>
+          <section>
+            <h3>Types of Databases</h3>
+            <ul>
+              <li>Relational (Postgres, MySQL)</li>
+              <li>Document-based (MongoDB, ElasticSearch)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Let's make database tasks repeatable...</h3>
+            <p>Lot's of local data wrangling that can be repetitive</p>
+            <p>Makes sense to have scripts to automate these things</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>RESTful web apps</h3>
+            <p>Representational state transfer</p>
+          </section>
+          <section>
+            <h3>What the hell is that?</h3>
+            <p>Basically, using HTTP methods (verbs) and routes to request system access and manipulate data</p>
+          </section>
+          <section>
+            <h3>What the hell is <em>that</em>?</h3>
+            <p>HTTP methods: GET, POST, PUT, DELETE</p>
+            <p>Routes: http://mywebsite.com/notes/1234</p>
+            <p> GET request to /notes/123 - get note w/ id 123</p>
+            <p> POST request to /notes (with {data}) - create a note with {data}</p>
+          </section>
+          <section>
+            <p>http://mywebsite.com/{resource}/{id}</p>
+            <p>http://mywebsite.com/{resource}/{id}/{nested_resource}/{id}</p>
+            <p>GET request to /users/23/notes - gets all the notes for user w/ id 23</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Testing your code</h3>
+            <p>Automated test-driven development</p>
+          </section>
+          <section>
+            <h3>Red, Green, Refactor</h3>
+            <p>1. First write a test for the code you wish you had</p>
+            <p>2. Run it and watch it fail (red)</p>
+            <p>3. Write the code to make it pass (green)</p>
+            <p>4. Refactor the code if you can w/o breaking the test</p>
+          </section>
+        </section>
+        <section>
+          <h3>Deployment</h3>
+        </section>
+        <section>
+          <section>
+            <h3>What have we done? (!!)</h3>
+            <p>TL;DL;</p>
+          </section>
+          <section>
+            <h3>Should we have done this?</h3>
+            <ul>
+              <li>Maybe? Depends on the use case</li>
+              <li>Understanding the magic of web frameworks</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Future Reading</h3>
+          </section>
+          <section>
+            <h3>Other Alt-JS</h3>
+            <ul>
+              <li>Typescript</li>
+              <li>Purescript</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Front-end / Browser stuff</h3>
+            <ul>
+              <li>React (and Vue, Angular :(, Elm)</li>
+              <li>Single-page Applications</li>
+              <li>Live reloading in development</li>
             </ul>
           </section>
           <section>
@@ -101,40 +328,6 @@
               <li></li>
             </ul>
           </section>
-        </section>
-        <section>
-          <section>
-            <h3>HTTP - the protocol of the web</h3>
-          </section>
-          <section>
-            <h3>Client vs. Server</h3>
-          </section>
-          <section>
-            <h3>URLs, Routes, Paths, etc.</h3>
-          </section>
-          <section>
-            <h3>Your typical web app structure</h3>
-            <img src="http://www.softwaretestingclass.com/wp-content/uploads/2013/01/three-tier-architecture.png" />
-          </section>
-        </section>
-        <section>
-          <h3>HTML/CSS</h3>
-          <section>
-            <h3>HTML is your declarative code</h3>
-          </section>
-          <section>
-            <h3>CSS is what makes things look nice</h3>
-            <p>CSS Zen Garden...</p>
-          </section>
-        </section>
-        <section>
-          <h3>Databases / Application Persistance</h3>
-        </section>
-        <section>
-          <h3>Testing your code</h3>
-        </section>
-        <section>
-          <h3>Deployment</h3>
         </section>
       </div>
     </div>
