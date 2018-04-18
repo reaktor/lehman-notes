@@ -247,6 +247,11 @@ async function() {
             </ul>
           </section>
           <section>
+            <h3>Structured Query Language (Relational)</h3>
+            <p>Allows you to query and manipulate your data in the database</p>
+            <p>Main commands: <code>SELECT, INSERT, UPDATE, DELETE</code></p>
+          </section>
+          <section>
             <h3>Let's make database tasks repeatable...</h3>
             <p>Lot's of local data wrangling that can be repetitive</p>
             <p>Makes sense to have scripts to automate these things</p>
@@ -259,7 +264,8 @@ async function() {
           </section>
           <section>
             <h3>What the hell is that?</h3>
-            <p>Basically, using HTTP methods (verbs) and routes to request system access and manipulate data</p>
+            <p>Basically, using HTTP methods (verbs) and routes to request 
+              system access and manipulate resources</p>
           </section>
           <section>
             <h3>What the hell is <em>that</em>?</h3>
@@ -273,6 +279,16 @@ async function() {
             <p>http://mywebsite.com/{resource}/{id}/{nested_resource}/{id}</p>
             <p>GET request to /users/23/notes - gets all the notes for user w/ id 23</p>
           </section>
+          <section>
+            <p>GET requests use query strings like <code>/search?search_term=Game+of+thrones</code></p>
+            <p>POST requests use body like:</p>
+            <pre><code>
+{
+  "title": "this is title",
+  "body": "some body text stuff"
+}
+            </code></pre>
+          </section>
         </section>
         <section>
           <section>
@@ -285,6 +301,31 @@ async function() {
             <p>2. Run it and watch it fail (red)</p>
             <p>3. Write the code to make it pass (green)</p>
             <p>4. Refactor the code if you can w/o breaking the test</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>So...HTTP Methods...</h3>
+            <img src="https://media0.giphy.com/media/7p3e2WCM0VEnm/giphy.gif">
+          </section>
+          <section>
+            <h3>HTML forms only support <code>GET</code> and <code>POST</code></h3>
+            <p>PUT and DELETE were in the spec, but they got removed</p>
+          </section>
+          <section>
+            <h3>Turns out the entire internet is a hack.</h3>
+          </section>
+          <section>
+            <h3>So how do people deal with that?</h3>
+            <pre><code>
+<form action="POST">
+  <input type="hidden" name="_method" value="PUT" />
+</form>
+            </code></pre>
+            <p>This is what most web frameworks do</p>
+          </section>
+          <section>
+            <p>But that's not what we're gonna do...</p>
           </section>
         </section>
         <section>
@@ -302,10 +343,30 @@ async function() {
               <li>Understanding the magic of web frameworks</li>
             </ul>
           </section>
+          <section>
+            <h3>What's a web framework</h3>
+            <h4>Every lang has it's go-to:</h4>
+            <p>Ruby -> Rails</p>
+            <p>Python -> Django</p>
+            <p>Elixir -> Phoenix</p>
+          </section>
         </section>
         <section>
           <section>
             <h3>Future Reading</h3>
+          </section>
+          <section>
+            <h3>Deployment / Continuous Integration</h3>
+            <ul>
+              <li></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Functional Programming</h3>
+            <ul>
+              <li><a href="https://mostly-adequate.gitbooks.io/mostly-adequate-guide/">Mostly Adequate guide to FP</a></li>
+              <li><a href="https://pragprog.com/book/elixir16/programming-elixir-1-6">Programming Elixir</a></li>
+            </ul>
           </section>
           <section>
             <h3>Other Alt-JS</h3>
@@ -325,7 +386,15 @@ async function() {
           <section>
             <h3>Other JS resources</h3>
             <ul>
-              <li></li>
+              <li><a href="https://nodeschool.io/">Node School - learn JS</a></li>
+              <li><a href="https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90">Body Parser</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Other resources</h3>
+            <ul>
+              <li><a href="https://exercism.io">Exercism - learn any lang through git exercises</a></li>
+              <li><a href="https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90">Body Parser</a></li>
             </ul>
           </section>
         </section>
