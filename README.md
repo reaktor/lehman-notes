@@ -1,7 +1,5 @@
 # Lehman Notes
 
-This is a presentation for the NSBE-SHPE presentation in Lehman College
-
 ## Setting up
 
 1.  Install Nodejs from [official site](https://nodejs.org/en/download/) or through a version manager like
