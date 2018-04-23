@@ -10,7 +10,9 @@ This is a presentation for the NSBE-SHPE presentation in Lehman College
 3.  [Install postgres](https://www.postgresql.org/download/). We have used `Postgres.app` for this talk.
 4.  Install [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli)
 
-## Running locally
+## [Step by step tutorial](tutorial.md)
+
+## To run the app locally
 
 Run:
 
