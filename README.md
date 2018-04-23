@@ -22,6 +22,8 @@ Run:
 > npm run start
 ```
 
+## [Slides from presentation](http://lehman-notes-part2.herokuapp.com/slides)
+
 <section>
 <section>
 <h3>Future Reading</h3>
