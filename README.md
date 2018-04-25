@@ -44,12 +44,12 @@ Run:
 </ul>
 </section>
 <section>
-<h3>books</h3>
+<h3>Books</h3>
 <ul>
 <li><a href="https://bigmachine.io/products/the-imposters-handbook">the imposter's handbook</a></li>
 <li><a href="http://www.poodr.com/">practical oop in ruby</a></li>
 <li><a href="https://pragprog.com/book/elixir16/programming-elixir-1-6">programming elixir</a></li>
-<li><a href="https://bigmachine.io/products/the-imposters-handbook">the imposter's handbook</a></li>
+<li><a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">the pragmatic programmer</a></li>
 </ul>
 </section>
 <section>
